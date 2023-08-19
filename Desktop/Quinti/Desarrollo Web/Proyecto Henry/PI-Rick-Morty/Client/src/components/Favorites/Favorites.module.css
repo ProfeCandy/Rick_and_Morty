@@ -1,0 +1,28 @@
+/* En el CSS de la página de favoritos */
+.FavoritesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estilos para cada tarjeta en la página de favoritos */
+.FavoritesCard {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 10px;
+  /* Agrega los demás estilos de Card aquí */
+}
+
+h1 {
+  font-size: 36px;
+  color: #fff;
+  /* Cambia el color del texto según tus preferencias */
+  text-align: center;
+  margin-bottom: 20px;
+  /* Agrega otros estilos que desees para el h1 */
+}

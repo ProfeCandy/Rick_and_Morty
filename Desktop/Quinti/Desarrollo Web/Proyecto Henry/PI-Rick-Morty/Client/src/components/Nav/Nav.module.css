@@ -1,0 +1,84 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a09f9f;
+  padding: 10px;
+  position: relative;
+}
+
+.buttondivLeft {
+  display: flex;
+  align-items: center;
+}
+
+.buttondivLeft p {
+  margin: 0 15px;
+  /* Aumenta el espacio horizontal entre los botones */
+  font-size: 18px;
+  /* Aumenta el tamaño de fuente de los botones */
+}
+
+.SearchBarRight {
+  display: flex;
+  align-items: center;
+}
+
+.SearchBarRight input {
+  width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  /* Agrega un borde */
+  border-radius: 5px;
+  /* Añade el border-radius para hacerlo menos cuadrado */
+}
+
+.SearchBarRight button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  /* Cambia el color del texto del botón a blanco */
+  border-radius: 5px;
+  /* Añade el border-radius para hacerlo menos cuadrado */
+}
+
+.SearchBarRight button {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid #4433ff;
+  color: #4433ff;
+}
+
+.SearchBarRight button:hover {
+  color: #fff;
+}
+
+.SearchBarRight button:hover:after {
+  width: 100%;
+}
+
+.SearchBarRight button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #4433ff;
+}

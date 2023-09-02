@@ -73,7 +73,7 @@ async function getCharById(req, res) {
       res.status(404).json({ message: 'Not Found' });
     } else {
       const { id, status, name, species, origin, image, gender } = response.data;
-      res.json({ id, status, name, species, origin, image, gender });
+      res.json({ id, status, name, species, origin:origin.name , image, gender });
     }
   } catch (error) {
     res.status(500).json({ error: 'Error fetching character data' });

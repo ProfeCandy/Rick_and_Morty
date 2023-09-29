@@ -1,0 +1,13 @@
+.cardContainer {
+  width: 100%;
+  min-width: 1400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: max-content;
+}
+
+.section {
+  max-width: 1600px;
+  margin: 0 auto;
+}

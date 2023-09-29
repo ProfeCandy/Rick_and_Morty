@@ -1,0 +1,43 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 290px;
+  max-height: 500px;
+  margin: 10px;
+  position: relative;
+}
+
+.card h2 {
+  margin-top: 0;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card img {
+  width: 280px;
+  height: 280px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.card a {
+  height: 80px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.link {
+  max-height: 20px;
+  margin-bottom: 0px;
+
+}

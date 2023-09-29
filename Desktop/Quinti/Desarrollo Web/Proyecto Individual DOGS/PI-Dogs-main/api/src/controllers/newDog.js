@@ -9,15 +9,15 @@ async function newDog(req, res) {
       return res.status(400).json({ error: 'Todos los campos son obligatorios' });
     }
 
-    const tempdog = temperaments.split(',').map((temp) => temp.trim());
+    // const tempdog = temperaments.split(',').map((temp) => temp.trim());
 
-    if (tempdog.length === 0) {
+    if (temperaments.length === 0) {
       return res.status(400).json({ error: 'Al menos un temperamento es requerido' });
     }
 
     // Verificar si los temperamentos ya existen en la base de datos y crearlos si no
     const createdTemperaments = await Promise.all(
-      tempdog.map(async (temp) => {
+      temperaments.map(async (temp) => {
         const [createdTemperament] = await Temp.findOrCreate({
           where: { name: temp },
         });
@@ -34,9 +34,21 @@ async function newDog(req, res) {
       life_span,
     });
 
-    await newDogo.addTemp(createdTemperaments);
+    await newDogo.setTemps(createdTemperaments);
 
-    return res.status(201).json(newDogo);
+    const tempname = createdTemperaments.map((temp) => temp.name)
+
+    const response = {
+      name,
+      image,
+      height,
+      weight,
+      life_span,
+      temperaments: tempname
+    }
+
+    return res.status(201).json(response);
+
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: 'Error al crear un nuevo perro' });

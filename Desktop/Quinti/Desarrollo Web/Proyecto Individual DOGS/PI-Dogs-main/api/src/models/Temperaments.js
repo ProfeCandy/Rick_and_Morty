@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 
+
 module.exports = (sequelize) => {
   sequelize.define('Temp', {
     id: {
@@ -12,5 +13,5 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-  });
+  }, {timestamp: false} );
 };

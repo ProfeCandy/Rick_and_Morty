@@ -13,10 +13,10 @@ const { dogtemp } = require('../controllers/dogtemp')
 const router = Router();
 
 router.get('/dogs', getAllDog);
-router.get('/dogs/:id', dogRoutes);
 router.get('/dogs/name', dogName)
-router.post('/dogs', newDog)
+router.get('/dogs/:id', dogRoutes);
 router.get('/temperaments', dogtemp)
+router.post('/dogs', newDog)
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 

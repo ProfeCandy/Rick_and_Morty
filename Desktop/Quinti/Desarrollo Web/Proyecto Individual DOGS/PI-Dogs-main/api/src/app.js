@@ -12,7 +12,7 @@ const { conn } = require('./db.js');
 
 require('./db.js');
 
-conn.sync({ force : true})
+conn.sync({ force : false})
   .then (() => {
     server.listen(PORT, () => {
     console.log('Server raised in port: ' + PORT)

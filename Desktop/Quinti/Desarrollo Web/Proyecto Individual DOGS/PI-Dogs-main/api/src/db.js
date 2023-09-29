@@ -5,10 +5,12 @@ const fs = require('fs');
 const path = require('path');
 
 const { DB_USER, DB_PASSWORD, DB_HOST, API_KEY } = process.env;
+
 const Dogs = require('./models/Dog')
 const Temperaments = require('./models/Temperaments')
 
 const url = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dogs`
+
 const sequelize = new Sequelize(
   url, {
     logging: false, // set to console.log to see the raw SQL queries
@@ -44,6 +46,7 @@ Dog.belongsToMany(Temp, { through: "DogTemperament" })
 Temp.belongsToMany(Dog, { through: "DogTemperament" })
 
 module.exports = {
-  ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
+  Dog,
+  Temp, 
   conn: sequelize,     // para importart la conexión { conn } = require('./db.js');
 };
